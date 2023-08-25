@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchedOrNot</title>
+  </head>
+  <body>
+    <p>
+      <input type="text" name="username" id="name" placeholder="first name" />
+    </p>
+
+    <p>
+      <input type="password" name="password" id="pass" placeholder="password" />
+    </p>
+
+    <button type="button" id="btn" onclick="alertBox()">SUBMIT</button>
+    <script type="text/javascript">
+      function alertBox() {
+        let name = document.getElementById("name").value;
+        let pin = document.getElementById("pass").value;
+
+        if (name === "Kaviya" && pin === "12345") {
+          alert("Welcome kaviya...!");
+        } else {
+          alert("Entered password or username is wrong");
+        }
+      }
+    </script>
+  </body>
+</html>

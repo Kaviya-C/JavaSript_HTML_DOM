@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form onsubmit=" return validate()" action="message.html">
+      <p><input id="name" type="text" placeholder="Username" /></p>
+      <p><input id="pass" type="password" placeholder="password" /></p>
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <script type="text/javascript">
+      function validate() {
+        let name = document.getElementById("name");
+        let password = document.getElementById("pass");
+
+        // if user giving space then submit it went to next page to avoid this use trim method to remove the space
+        if (name.value.trim() == "" || password.value.trim() === "") {
+          alert("No blank values are allowed");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

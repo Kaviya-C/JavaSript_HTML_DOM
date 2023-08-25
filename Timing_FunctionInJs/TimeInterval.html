@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeInterval</title>
+  </head>
+  <body>
+    <button type="button" onclick="started()">Starting</button>
+    <h2>Here Count starts</h2>
+    <p id="text"></p>
+    <button type="button" onclick="stoped()">Stopped</button>
+
+    <script type="text/javascript">
+      var id = 0;
+      var count = 0;
+      function message() {
+        document.getElementById("text").innerHTML = count + "    Seconds";
+        count++;
+      }
+      function started() {
+        id = window.setInterval(message, 1000);
+      }
+      function stoped() {
+        window.clearInterval(id);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MailVerification</title>
+  </head>
+  <body>
+    <p>
+      <input type="text" id="mail" placeholder="Email" />
+    </p>
+    <p id="validation" style="visibility: hidden">Invalid</p>
+    <button onclick="emailVerify()" type="button">Submit</button>
+
+    <script type="text/javascript">
+      function emailVerify() {
+        let email = document.getElementById("mail").value;
+        var regex = /^([a-z0-9\.-]+)@([a-z0-9]+).([a-z]{1,8})(.[a-z]{1,8})?$/;
+        if (regex.test(email)) {
+          alert("valid");
+          document.getElementById("validation").innerHTML = "Valid";
+        } else {
+          // document.getElementById('validation').innerHTML='Invalid';
+          alert("invalid");
+          document.getElementById("validation").style.visibility = "visible";
+        }
+      }
+    </script>
+  </body>
+</html>

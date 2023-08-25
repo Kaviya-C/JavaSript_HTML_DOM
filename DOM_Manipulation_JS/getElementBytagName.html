@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tagNameJS</title>
+  </head>
+  <body>
+    <div>
+      <p>This is kaviya</p>
+      <p>I am doing very great job</p>
+      <p>I am ambitious person</p>
+      <p>I give my best wherever i go</p>
+    </div>
+    <button onclick="tagClick()">Submit</button>
+    <hr />
+    <div>
+      <h4 class="dupl">This is getElementsByClassName</h4>
+      <h4 class="dupl">
+        this contains group of elements which having same class name
+      </h4>
+      <h4 class="dupl">
+        we can get all the elements if it paragraph tag or anchor tag or article
+        tag its not a problem
+      </h4>
+      <h4 class="dupl">
+        getElementsByTagName only select the tag which we given by us
+      </h4>
+      <a class="dupl" href="#"
+        >This also can be selected bcoz it having classname which is same for p
+        tag and anchor tag</a
+      >
+    </div>
+    <br />
+    <button onclick="classClick()">Submit</button>
+
+    <script>
+      function tagClick() {
+        let tagname = document.getElementsByTagName("p");
+        // this is an array
+        for (let index = 0; index < tagname.length; index++) {
+          tagname[index].style.color = "blue";
+          tagname[index].style.fontSize = "20px";
+          tagname[index].style.border = "2px solid  red";
+        }
+      }
+
+      function classClick() {
+        let className = document.getElementsByClassName("dupl");
+        for (let i = 0; i < className.length; i++) {
+          className[i].style.border = "3px dashed blue";
+        }
+      }
+    </script>
+  </body>
+</html>

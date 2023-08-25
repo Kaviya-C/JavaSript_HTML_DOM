@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegularExpression</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">Username</label>
+      <input type="text" id="name" placeholder="Username" />
+      <label id="invalid" style="color: red; visibility: hidden">Invalid</label>
+      <button onclick="submitted()" type="button">SUBMIT</button>
+    </form>
+
+    <script type="text/javascript">
+      function submitted() {
+        var name = document.getElementById("name").value;
+        var regex = /E00/i;
+        //---start with only small a to z and capital a to z are must present
+        var reg=/[a-zA-z]00/;
+
+        // i want to exclude something it means i dont want set of character
+        var re=/[^abc]/or;
+        //except abc others are allowed of first place
+
+
+        if (regex.test(name)) {
+          alert("valid username");
+          document.getElementById("invalid").style.visibility = "hidden";
+        } else {
+          // alert('invalid username');
+          document.getElementById("invalid").style.visibility = "visible";
+        }
+      }
+    </script>
+  </body>
+</html>

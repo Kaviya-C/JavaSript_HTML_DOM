@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radioBtnEvent</title>
+  </head>
+  <body>
+    <p>
+      <label for="rd1"></label>
+      <input type="radio" name="group1" id="rd1" value="kaviyaPoetry" />Poetry
+      Writer
+    </p>
+
+    <p>
+      <label for="rd2"></label>
+      <input
+        type="radio"
+        id="rd2"
+        name="group1"
+        value="StoryWriter"
+      />StoryWriter
+    </p>
+
+    <button type="button" onclick="radioClick()">Submit</button>
+
+    <script type="text/javascript">
+      function radioClick() {
+        let first = document.getElementById("rd1");
+        let second = document.getElementById("rd2");
+
+        if (first.checked === true) alert(first.value);
+        else if (second.checked === true) alert(second.value);
+        else alert("Nothing is selected");
+      }
+    </script>
+  </body>
+</html>

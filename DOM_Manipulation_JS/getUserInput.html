@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>userInputTextBox</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <input type="text" id="text1" placeholder="Enter Name" />
+    <br /><br />
+    <button id="btn1" onclick="submitFun()">Submit</button>
+
+    <script type="text/javascript">
+      function submitFun() {
+        let str = document.getElementById("text1").value;
+        alert("User entered Input: " + str);
+      }
+    </script>
+  </body>
+</html>

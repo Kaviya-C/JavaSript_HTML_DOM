@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimingFunctions</title>
+  </head>
+  <body>
+    <button type="button" onclick="starts()">Start</button>
+    <h2><p id="text">Some Text</p></h2>
+    <button type="button" onclick="stops()">Stop</button>
+    <script type="text/javascript">
+      var id = 0;
+
+      function printMessage() {
+        document.getElementById("text").innerHTML = "Paused for 5 seconds";
+      }
+      function starts() {
+        id = window.setTimeout(printMessage, 5000);
+      }
+      function stops() {
+        window.clearTimeout(id);
+      }
+    </script>
+  </body>
+</html>

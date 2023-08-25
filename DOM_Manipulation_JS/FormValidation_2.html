@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validate _2</title>
+  </head>
+  <body>
+    <form onsubmit="return validated()" action="message.html">
+      <div>
+        <label for="name">FirstName: </label>
+        <p><input type="text" id="name" placeholder="Username" /></p>
+        <p id="not" style="color: red; visibility: hidden">Invalid</p>
+      </div>
+
+      <div>
+        <label for="pass">Password: </label>
+        <p>
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            id="pass"
+          />
+        </p>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script type="text/javascript">
+      function validated() {
+        let name = document.getElementById("name");
+        let password = document.getElementById("pass");
+
+        if (name.value.trim() === "" || password.value.trim === "") {
+          alert("No blank values are allowed");
+          name.style.border = "3px solid red";
+          document.getElementById("not").style.visibility = "visible";
+          return false;
+        } else if (password.value.length < 5) {
+          console.log("password: " + password.length, password.value.length);
+          alert("password length is too short enter maximum 5 values");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

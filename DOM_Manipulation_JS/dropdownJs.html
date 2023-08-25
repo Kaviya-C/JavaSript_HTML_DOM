@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DropDown</title>
+  </head>
+  <body>
+    <select id="selectBox">
+      <option value="CoreJava">Core Java</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+    </select>
+    <button id="button" onclick="DropClick()">Submit</button>
+
+    <script type="text/javascript">
+      function DropClick() {
+        let select = document.getElementById("selectBox");
+        console.log(select.selectedIndex);
+        alert(select.options[select.selectedIndex].value);
+      }
+    </script>
+  </body>
+</html>

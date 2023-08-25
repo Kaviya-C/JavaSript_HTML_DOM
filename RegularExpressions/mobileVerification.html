@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern_2</title>
+  </head>
+  <body>
+    <label for="phoneNo">PhoneNo: </label>
+    <p>
+      <input type="text" id="phoneNo" />
+    </p>
+
+    <p id="valid" style="visibility: hidden">Invalid</p>
+    <button type="button" onclick="phoneValidation()">Submit</button>
+
+    <script type="text/javascript">
+      function phoneValidation() {
+        let phone = document.getElementById("phoneNo").value;
+
+        var regex = /[7-9]\d{9}/;
+        // var reg=/^[5-9][a-z]{8}0$/;
+        if (regex.test(phone)) {
+          document.getElementById("valid").innerHTML = "Valid";
+          document.getElementById("valid").style.color = "green";
+          document.getElementById("valid").style.visibility = "visible";
+        } else {
+          // document.getElementById('valid').innerHTML="Invalid";
+          document.getElementById("valid").style.color = "red";
+          document.getElementById("valid").style.visibility = "visible";
+        }
+      }
+    </script>
+  </body>
+</html>
